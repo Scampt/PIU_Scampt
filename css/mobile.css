@@ -21,7 +21,7 @@ body {
 }
 
 .icono-pegado img {
-    width: 30px;
+    width: 35px;
     opacity: .5;
 }
 
@@ -38,6 +38,14 @@ header nav {
     width: 100%;
     padding: 20px;
     display: flex;
+    flex-wrap: wrap;
+}
+
+.box-btn {
+    width: 50%;
+    display: inline-block;
+    align-self: center;
+    text-align: center;
 }
 
 .barras {
@@ -45,7 +53,7 @@ header nav {
     border: none;
     background: none;
     color: #fff;
-    font-size: 2.5rem;
+    font-size: 3rem;
     cursor: pointer;
     opacity: .7;
 }
@@ -59,12 +67,17 @@ header nav {
     opacity: .7;
 }
 
-.logo-box {
-    width: 100%;
+.logo-box-main {
+    width: 50%;
+    text-align: center;
 }
 
-.logo-box .logo img {
+.logo-box-main .logo img {
     width: 200px;
+}
+
+.logo-box {
+    width: 100%;
 }
 
 .nav-link {
@@ -74,12 +87,10 @@ header nav {
 
 .nav-menu {
     width: 100%;
-    display: flex;
+    margin-top: 10px;
+    display: none;
     align-items: center;
-    background: #000;
     flex-direction: column;
-    position: fixed;
-    right: 100%;
 }
 
 .blue {color: #0ea1e4;}
@@ -87,32 +98,13 @@ header nav {
 .yellow {color: #ffdc00;}
 
 .nav-menu-visible {
-    left: 0;
-}
-
-.cerrar {
-    width: 10%;
-    cursor: pointer;
-    border: none;
-    background: none;
-    color: #fff;
-    font-size: 2.5rem;
-    align-self: flex-end;
-    margin-right: 15px;
-    margin-top: 5px;
-    opacity: .7;
-}
-
-
-.cerrar:hover {
-    opacity: 1;
+    display: flex;
 }
 
 .nav-menu li {
     list-style: none;
-    font-size: 1.4rem;
-    padding: 10px 0;
-    line-height: 30px;
+    font-size: 1.5rem;
+    padding: 20px 0;
     text-transform: uppercase;
 }
 
@@ -146,6 +138,8 @@ main .logo-box img {
 }
 
 main .info-songs {
+    margin: auto;
+    width: 90%;
     font-size: 1.8rem;
     padding-left: 30px;
     margin-bottom: 100px;
@@ -167,6 +161,7 @@ main .info-songs {
 .stepprime-title,
 .stepmakers-title {
     font-size: 1.8rem;
+    line-height: 0;
     color: #ffdc00;
     margin-bottom: 20px;
 }
@@ -300,7 +295,6 @@ hr {
     font-style: normal;
 }
 
-
 /* FOOTER */
 
 footer {
@@ -368,20 +362,24 @@ footer ul li a i
 
     header nav {
         justify-content: space-between;
+        flex-wrap: nowrap;
+        align-items: center;
     }
 
-    header .barras,
-    .cerrar {
+    .box-btn,
+    .barras {
         display: none;
     }
 
-    header .nav-menu {
-        position: static;
+    .nav-menu {
         width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         flex-direction: row;
     }
 
-    header .logo-box .logo img {
+    header .logo-box-main .logo img {
         width: 260px;
         margin: 0;
     }
@@ -400,6 +398,9 @@ footer ul li a i
     }
 
     main .info-songs {
+        background: #000;
+        width: 70%;
+        text-align: center;
         font-size: 2.5rem;
     }
 
@@ -451,7 +452,6 @@ footer ul li a i
         width: 90%;
     }
 
-
     .canal {
         text-align: center;
         font-size: 3rem;
@@ -486,14 +486,14 @@ footer ul li a i
 /* MEDIAQUERIE DE 1000PX */
 @media (min-width:1000px) {
     .icono-pegado img {
-        width: 50px;
+        width: 45px;
         opacity: .5;
     }
     header .nav-menu li {
-        margin-left: 80px;
+        margin-left: 40px;
         font-size: 2rem;
     }
-    header .logo-box .logo img {
+    header .logo-box-main .logo img {
         width: 330px;
     }
 
